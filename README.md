@@ -5,7 +5,8 @@ The Currency Exchanger is a Django / DRF based API that allows to get the price 
 # 💽 Installation
 
 1. #### Clone or download the repository.
-2. #### Run docker services: `docker-compose -f docker-compose.yaml up -d`
+2. #### Rename .env.dist to .env and populate it with all variables or just leave test ones.
+3. #### Run docker services: `docker-compose -f docker-compose.yaml up -d`
 
 # 🌄 Demonstration
 

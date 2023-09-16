@@ -1,5 +1,7 @@
 from functools import cached_property
 
+from django.conf import settings
+
 from common.exceprions import CurrencyNotFoundError
 from common.services import IService
 from core.currencyapi import client
@@ -9,6 +11,7 @@ class CurrencyConverterService(IService):
     """
     A service for converting one currency into another.
     """
+
     def __init__(self, from_currency: str, to_currency: str, amount: float | str):
         self.currencies = self.load_currencies()
         self.validate_currencies((from_currency, to_currency))
@@ -17,7 +20,7 @@ class CurrencyConverterService(IService):
         self._amount = amount
 
     def execute(self) -> float:
-        return round(self.converted_currency, 2)
+        return round(self.converted_currency, settings.PRICE_ROUNDING)
 
     def validate_currencies(self, currencies_to_validate):
         """
