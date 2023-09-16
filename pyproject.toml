@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "An API that allows to get the value of one currency in relation to another."
 authors = ["Nikita Solouyou <solovev.nikita.05@gmail.com>"]
 readme = "README.md"
-packages = [{include = "currency_exchanger_api"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"

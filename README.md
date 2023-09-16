@@ -5,9 +5,7 @@ The Currency Exchanger is a Django / DRF based API that allows to get the price 
 # 💽 Installation
 
 1. #### Clone or download the repository.
-2. #### Activate the Poetry virtual environment: `poetry shell`
-3. #### Install dependencies: `poetry install`
-4. #### Run development server: `python manage.py runserver`
+2. #### Run docker services: `docker-compose -f docker-compose.yaml up -d`
 
 # 🌄 Demonstration
 
