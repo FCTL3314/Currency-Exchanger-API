@@ -27,7 +27,7 @@ class CurrencyConverterService(IService):
 
     @cached_property
     def amount(self) -> float:
-        if type(self._amount) is str:
+        if isinstance(self._amount, str):
             return float(self._amount)
         return self._amount
 

@@ -16,19 +16,13 @@ class CurrencyConverterAPIView(APIView):
         serializer.is_valid(raise_exception=True)
         try:
             service = self.service_class(
-                serializer.data["_from"],
+                serializer.data["from"],
                 serializer.data["to"],
                 serializer.data["value"],
             )
+            return Response({"result": service.execute()}, status.HTTP_200_OK)
+        except CurrencyNotFoundError as err:
             return Response(
-                {"result": service.execute()},
-                status.HTTP_200_OK
-            )
-        except CurrencyNotFoundError as error:
-            return Response(
-                {"detail": error.message},
+                {"detail": err.message},
                 status.HTTP_400_BAD_REQUEST,
             )
-
-
-
