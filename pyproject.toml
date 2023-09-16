@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "currency-exchanger-api"
+version = "0.1.0"
+description = "An API that allows to get the value of one currency in relation to another."
+authors = ["Nikita Solouyou <solovev.nikita.05@gmail.com>"]
+readme = "README.md"
+packages = [{include = "currency_exchanger_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django-rest-framework = "^0.1.0"
+django = "^4.2.5"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+ruff = "^0.0.290"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
