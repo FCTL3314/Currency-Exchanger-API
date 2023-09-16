@@ -1,5 +1,5 @@
 # 📃 About
-The GUI-TestTask is an API that allows to get the price of one currency in relation to another.
+The Currency Exchanger is a Django / DRF base API that allows to get the price of one currency in relation to another.
 > The project was created as a test task.
 
 # 💽 Installation
